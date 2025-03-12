@@ -1,0 +1,172 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    background-image: urk("valentin");
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+    background: url('default-bg.jpg') no-repeat center center/cover;
+    background-color: #000;
+    color: #2c3063;
+    transition: background 0.5s ease-in-out;
+}
+
+/* Weather Container */
+.container {
+    background: rgba(11, 96, 129, 0.9);
+    color: #000;
+    padding: 35px;
+    border-radius: 18px;
+    width: 100%;
+    max-width: 450px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Search Bar */
+.weather_header {
+    margin-bottom: 20px;
+}
+
+.weather_search {
+    display: flex;
+    align-items: center;
+    background: #222;
+    padding: 12px;
+    border-radius: 25px;
+    max-width: 380px;
+    margin: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.weather_search i {
+    color: #13eded;
+    margin-right: 10px;
+    font-size: 18px;
+}
+
+.city_name {
+    border: none;
+    outline: none;
+    background: none;
+    color: #fff;
+    font-size: 16px;
+    flex-grow: 1;
+}
+
+/* Weather Data */
+.weather_body {
+    margin-bottom: 20px;
+}
+
+.weather_city {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.weather_date_time {
+    font-size: 14px;
+    color: #080707;
+}
+
+.weather_forecast {
+    display: inline-block;
+    background: #000;
+    color: #fff;
+    padding: 6px 12px;
+    border-radius: 15px;
+    font-size: 14px;
+    margin: 10px 0;
+}
+
+.weather_icon img {
+    width: 75px;
+}
+
+.weather_temp {
+    font-size: 56px;
+    font-weight: bold;
+}
+
+.weather_minmax {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    margin: 10px 0;
+}
+
+/* Weather Info Cards */
+.weather_info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.weather-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(61, 60, 60, 0.85);
+    padding: 12px;
+    border-radius: 12px;
+    width: 48%;
+    transition: transform 0.3s ease, background 0.3s ease;
+    text-align: center;
+}
+
+.weather-card i {
+    font-size: 20px;
+    margin-right: 8px;
+    transition: color 0.3s ease;
+}
+
+.weather-card:hover {
+    transform: scale(1.08);
+    background: #000;
+    color: #ccc5c5;
+}
+
+.weather-card:hover i {
+    color: #f8d210;
+}
+
+/* Dynamic Backgrounds */
+body.sunny { 
+    background: url('sunny-bg.jpg') no-repeat center center/cover;
+}
+
+body.cloudy { 
+    background: url('cloudy-bg.jpg') no-repeat center center/cover;
+}
+
+body.rainy {
+    background: url('rainy-bg.jpg') no-repeat center center/cover;
+}
+
+body.snowy {
+    background: url('snowy-bg.jpg') no-repeat center center/cover;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+    .container {
+        width: 90%;
+    }
+    
+    .weather_info {
+        flex-direction: column;
+    }
+
+    .weather-card {
+        width: 100%;
+    }
+}
